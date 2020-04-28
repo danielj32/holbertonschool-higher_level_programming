@@ -6,7 +6,7 @@ ldigit = 10
 rest = number % ldigit
 
 if number < 0:
-    ldigit -= 10
+    rest -= 10
 print("Last digit of {:d} is {:d} ".format(number, rest), end='')
 
 if rest > 5:
