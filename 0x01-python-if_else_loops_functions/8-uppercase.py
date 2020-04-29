@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def islower(c):
+def uppercase(str):
         for k in range(len(str)):
                 upper = str[k]
         if ord(str[k]) > 96 and ord(str[k]) < 123:
