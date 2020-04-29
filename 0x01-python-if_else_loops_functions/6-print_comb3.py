@@ -7,5 +7,4 @@ for n in range(0, 100):
                 print("{:02d}, ".format(n), end="")
 
         if n == 89:
-                print("{:d}".format(n))                
-
+                print("{:d}".format(n))
