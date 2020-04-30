@@ -1,0 +1,1 @@
+This is a directory contents information about modules and import in Python
