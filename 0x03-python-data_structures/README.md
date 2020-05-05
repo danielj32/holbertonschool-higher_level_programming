@@ -1,0 +1,1 @@
+THis directory contents information about lists, data structures and tuples in Python
