@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""show the class square"""
+
+
 class Square:
-        def p_square(self):
-                pass
+    """Representsa class Square"""
+    pass
