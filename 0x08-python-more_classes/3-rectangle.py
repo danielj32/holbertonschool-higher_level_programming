@@ -5,32 +5,32 @@
 class Rectangle:
     """show the class Rectangule"""
     def __init__(self, width=0, height=0):
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self, value):
-        if not isinstance(value, int):
+    def height(self, h):
+        if not isinstance(h, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        if h < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        self.__height = h
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    def width(self, value):
-        if not isinstance(value, int):
+    def width(self, w):
+        if not isinstance(w, int):
             raise TypeError("width must be an integer")
-        if value < 0:
-            raise TypeError("width must be >= 0")
-        self.__width = value
+        if w < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = w
 
     def area(self):
         return self.__width * self.__height
@@ -41,12 +41,12 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        r = ""
-        if self.__width is 0 or self.__height == 0:
-            return r
-        for ct_1 in range(self.__height):
-            for ct_2 in range(self.__width):
-                r = '#' + '#'
-            if (ct_1 < self.__height - 1):
-                r = '\n' + '\n'
-        return r
+        rect = ""
+        if self.__width == 0 or self.__height == 0:
+            return rect
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rect += '#'
+            if (i < self.__height - 1):
+                rect += '\n'
+        return rect
