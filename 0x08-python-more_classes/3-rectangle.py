@@ -41,12 +41,12 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        rect = ""
+        r = ""
         if self.__width == 0 or self.__height == 0:
-            return rect
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rect += '#'
-            if (i < self.__height - 1):
-                rect += '\n'
-        return rect
+            return r
+        for ct_1 in range(self.__height):
+            for ct_2 in range(self.__width):
+                r += '#'
+            if (ct_1 < self.__height - 1):
+                r += '\n'
+        return r
