@@ -1,0 +1,1 @@
+This is directory contens information Input/Output about Python
