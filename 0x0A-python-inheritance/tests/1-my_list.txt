@@ -27,3 +27,18 @@
     Traceback (most recent call last):
     ...
     TypeError: unorderable types: int() < str()
+
+---------------------
+    negative integer numbers
+
+    >>> ng = MyList()
+    >>> ng.append(-45)
+    >>> ng.append(-100)
+    >>> print(ng)
+    [-45, -100]
+
+    >>> ng.print_sorted()
+    [-100, -45]
+
+    >>> print(ng)
+    [-45, -100]
