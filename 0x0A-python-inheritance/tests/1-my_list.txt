@@ -1,4 +1,21 @@
+# ===============================================
+# Unit test for 1-my_list
+# ===============================================
+
 >>> MyList = __import__('1-my_list').MyList
 >>> lista = MyList([12, 20, 40, 80])
 >>> print(lista)
 [12, 20, 40, 80]
+
+ >>> lista = MyList()
+    >>> lista.print_sorted()
+    []
+
+---------------------
+---------------------
+    integer arguments
+
+    >>> lista.append(2)
+    >>> lista.append(100)
+    >>> print(lista)
+    [2, 100]
