@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ returns the dictionary  """
-import json
 
 
 def class_to_json(obj):
