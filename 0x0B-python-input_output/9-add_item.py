@@ -13,5 +13,5 @@ if __name__ == "__main__":
         lista_json = []
 
     for j in range(1, len(sys.argv)):
-        lista_json.append(sys.argv[1])
+        lista_json.append(sys.argv[j])
     save_to_json_file(lista_json, "add_item.json")
