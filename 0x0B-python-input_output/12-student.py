@@ -16,11 +16,12 @@ class Student:
     def to_json(self, attrs=None):
         """ returns directory description with filter """
 
-        if isinstance(attrs, list) and all(isinstance(attrs, str)
-                                            for attrs in attrs):
-            r = {}
-            for ct in attrs:
-                if ct in self.__dict__:
-                    r[ct] = self.__dict__[ct]
-            return r
-        return self.__dict__
+        if attrs is None or not isinstance(attrs, list):
+            return self.__dict__
+        r = {}
+        for ct in attrs:
+            if not isinstance(ct, str):
+                return self.__dict__
+            if ct in self.__dict__.keys():
+                r[ct] = self.__dict__[ct]
+        return r
