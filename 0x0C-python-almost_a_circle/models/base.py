@@ -41,3 +41,13 @@ class Base:
         if not isinstance(json_string, str) or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Method of class """
+        if cls.__name__ == "Rectangle":
+            mud = cls(3, 3)
+        else:
+            mud = cls(3)
+        mud.update(**dictionary)
+        return mud
