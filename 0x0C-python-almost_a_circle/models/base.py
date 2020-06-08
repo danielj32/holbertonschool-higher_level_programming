@@ -51,3 +51,19 @@ class Base:
             mud = cls(3)
         mud.update(**dictionary)
         return mud
+
+    @classmethod
+    def load_from_file(cls):
+        """ Method returns a list of instances """
+        file_name = cls.__name__ + ".json"
+        try:
+            with open(file_name) as f:
+                r = f.read()
+                dt = cls.from_json_string(r)
+                n_list = []
+                for i in dt:
+                    n_list.append(cls.create(**i))
+                return n_list
+        except:
+            pass
+        return []
