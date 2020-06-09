@@ -5,17 +5,20 @@ import json
 import pep8
 import inspect
 from models.base import Base
-Base = base.Base
+from models.rectangle import Rectangle
+from models.square import Square
 
-class Test_Base(unittest.TestCase):
+
+class TestBase(unittest.TestCase):
     """ This test check for
         the class Base """
 
     @classmethod
     def setUpClass(cls):
         """ set up """
-        cls.base_funcs = inspect.getmembers(Base, inspect.isfunction)
+        pass
 
-    def test_module(self):
-        """ module """
-        self.assertTrue(len(base.__doc__) >= 1)
+    @classmethod
+    def tearDown(cls):
+        """ only argument """
+        pass
