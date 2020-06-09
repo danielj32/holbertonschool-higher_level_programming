@@ -67,3 +67,38 @@ class Base:
         except:
             pass
         return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Save to file in format csv """
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w') as f:
+            if list_objs is None or list_objs == []:
+                f.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    csv_list = ["id", "width", "height", "x", "y"]
+                else:
+                    csv_list = ["id", "size", "x", "y"]
+                nlist_csv = csv.DictWriter(f, fieldnames=csv_list)
+                for row in list_objs:
+                    nlist_csv.writerow(row.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Load data in format csv """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, 'r') as file:
+                if cls.__name__ == "Rectangle":
+                    csv_list = ["id", "width", "height", "x", "y"]
+                else:
+                    csv_list = ["id", "size", "x", "y"]
+                nlist_csv = csv.DictReader(file, fieldnames=csv_list)
+                nlist_csv = [dict([k, int(val)] for k,
+                                  val in m.items())
+                             for m in nlist_csv]
+                return [cls.create(**argument) for argument in nlist_csv]
+        except:
+            pass
+        return []
