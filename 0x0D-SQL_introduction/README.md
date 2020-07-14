@@ -1,1 +1,1 @@
-This is a directory about databases with MySql
+This is a directory about databases with MySql.
