@@ -1,8 +1,8 @@
 #!/usr/bin/node
-const first_var = parseInt(process.argv[2]);
-const second_var = parseInt(process.argv[3]);
-function add(a, b) {
-  const result = first_var + second_var;
+const a = parseInt(process.argv[2]);
+const b = parseInt(process.argv[3]);
+function add (a, b) {
+  const result = a + b;
   console.log(result);
 }
-add(first_var, second_var);
+add(a, b);
